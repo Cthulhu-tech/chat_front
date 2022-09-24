@@ -9,7 +9,7 @@ export const SocketConnection = () => {
         socket.auth = {jwt: "sdfsdf"}
         socket.connect();
         socket.on('connection', (msg:string) => console.log(msg));
-
+        socket.on('jwt error', (msg:string) => console.log(msg));
         return () => {
             socket.close();
         };
