@@ -1,7 +1,10 @@
+import { RoomList } from "../../components/layout/room/roomList"
 import { Outlet } from "react-router-dom"
 
 export const Home = () => {
-    return <>home
+
+    return <>
+        <RoomList/>
         <Outlet/>
     </>
 }
