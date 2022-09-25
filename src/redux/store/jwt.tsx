@@ -1,21 +1,25 @@
-import { Action, JwtType } from "../../interface/redux";
+import { UserPayload, Action } from "../../interface/redux"
 
-const defaultState = {
-    user: {
-        login: null,
-        jwt: null,
-    }
+const defaultState:UserPayload = {
+    id: null,
+    user: null,
+    token: null,
+    load: true,
 }
 
-export const JWT = (state = defaultState, action:Action<string, JwtType>) => {
+const setData = "set_user_data"
+const deleteData = "delete_user_data"
+
+export const UserDataStore = (state = defaultState, action:Action<string, UserPayload>) => {
     switch (action.type){
-        case "update_jwt": 
-            return {...state, ...action.payload}
-        case "delete_jwt":
-            return {...state, user: null}
+        case setData: 
+            return {...state, ...action.payload, load: true}
+        case deleteData:
+            return { id: null, user: null, token: null, load: false }
         default:
             return state;
     }
 }
 
-export const updateToken = (payload: JwtType) => ({ type: "update_jwt", payload });
+export const deleteUserData = (payload: null) => ({ type: deleteData, payload });
+export const updateUserData = (payload: UserPayload) => ({ type: setData, payload });
