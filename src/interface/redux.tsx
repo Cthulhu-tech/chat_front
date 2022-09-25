@@ -3,18 +3,24 @@ export interface Action<T, P> {
     readonly payload?: P;
 }
 
+export type UserPayload = {
+    id: null | number;
+    user: null | string;
+    token: null | string;
+    load?: boolean;
+}
 
-export type JwtType = {
+export interface IUseFetch <T, U> {
+    readonly load: boolean;
+    readonly data: T | undefined;
+    readonly error: ErrorData | undefined;
+    fetchData: (url: string, data?: U) => void;
+}
 
-    user: {
-
-        login: null | string,
-        jwt: null | string,
-
-    }
-
+export type ErrorData = {
+    message: string;
 }
 
 export type ReduxStore = {
-    jwt: JwtType;
+    jwt: UserPayload;
 }
