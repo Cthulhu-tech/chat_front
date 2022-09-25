@@ -13,7 +13,7 @@ const deleteData = "delete_user_data"
 export const UserDataStore = (state = defaultState, action:Action<string, UserPayload>) => {
     switch (action.type){
         case setData: 
-            return {...state, ...action.payload, load: true}
+            return {...state, ...action.payload, load: false}
         case deleteData:
             return { id: null, user: null, token: null, load: false }
         default:
