@@ -10,17 +10,28 @@ export type UserPayload = {
     load?: boolean;
 }
 
-export interface IUseFetch <T, U> {
-    readonly load: boolean;
-    readonly data: T | undefined;
-    readonly error: ErrorData | undefined;
-    fetchData: (url: string, data?: U) => void;
-}
+export type IUseFetch <T, U> = [
+    boolean,
+    T | undefined,
+    ErrorData | undefined,
+    (url: string, data?: U) => void
+]
 
 export type ErrorData = {
     message: string;
 }
 
+export type Message = {
+    id: number;
+    message: string;
+    user: string;
+}
+
+export type RoomMessage = {
+    roomMessage: Message[]
+}
+
 export type ReduxStore = {
     jwt: UserPayload;
+    message: RoomMessage;
 }
