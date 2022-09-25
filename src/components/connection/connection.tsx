@@ -9,13 +9,16 @@ export const SocketConnection = () => {
     const jwt = useSelector((store:ReduxStore) => store.jwt.token)
 
     useEffect(() => {
-
-        socket.auth = {jwt}
-        socket.connect();
-        socket.on('connection', (msg:string) => console.log(msg));
-
+        if(jwt){
+            socket.auth = {jwt}
+            socket.connect()
+            socket.on('error', (msg:string) => console.log(msg))
+            socket.on('create', (msg:string) => console.log(msg))
+            socket.on('connection', (msg:string) => console.log(msg))
+            socket.on('disconection', (msg:string) => console.log(msg))
+        }
         return () => {
-            socket.close();
+            jwt && socket.close()
         };
 
     },[jwt])
