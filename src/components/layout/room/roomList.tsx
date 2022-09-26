@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom"
 import { useSelector } from "react-redux"
 import { DeleteRoom } from "./delete"
 import { Create } from "./create"
+import './room.scss'
 
 export const RoomList = () => {
 
@@ -18,21 +19,21 @@ export const RoomList = () => {
     const openCreate = () => setOpen(!open)
 
     const List = () =>
-        <section>{data && data.rooms.map((room) => 
-            <article key={room.id}>
-                <NavLink to={"room/" + room.id}>
-                    <p>Room name: {room.name}</p>
-                    <p>Room creater: {room.user}</p>
+        <section className="room-container">{data && data.rooms.map((room) => 
+            <article key={room.id} className="room-description">
+                <NavLink to={"room/" + room.id} className="room-link">
+                    <p className="room-name">#{room.name}</p>
+                    <p className="room-creator">{room.user}</p>
                 </NavLink>
                 {jwt.user === room.user && <DeleteRoom idRoom={room.id}/>}
             </article>
         )}</section>
     
 
-    return <aside>
+    return <aside className="room-data">
         {data && <List/>}
+        <input type="button" className="room-btn" value="Create Room" onClick={openCreate}/>
         {open && <Create/>}
-        <input type="button" value="Create Room" onClick={openCreate}/>
     </aside>
 
 }

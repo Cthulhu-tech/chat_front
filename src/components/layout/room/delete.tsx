@@ -6,6 +6,6 @@ export const DeleteRoom = ({idRoom}: {idRoom: number}) => {
 
     const deleteRoom = () => fetchData("room/" + idRoom)
 
-    return <input type="button" value="Delete" onClick={deleteRoom}/>
+    return <input type="button" value="Delete" className="delete-room" onClick={deleteRoom}/>
 
 }

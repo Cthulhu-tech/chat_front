@@ -13,9 +13,9 @@ export const Create = () => {
 
     const createRoom = () => user && fetchDataCreate('room', {login: user, ...value as RoomList})
 
-    return <>
+    return <div className="input-container">
     <input type="text" onChange={handler} name="name"/>
     <input type="button" value="Send" onClick={createRoom}/>
-    </>
+    </div>
 
 }
