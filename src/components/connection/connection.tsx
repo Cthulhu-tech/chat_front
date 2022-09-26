@@ -24,8 +24,6 @@ export const SocketConnection = () => {
     },[jwt])
 
     return <SocketContext.Provider value={socket}>
-        <div>
             <Outlet/>
-        </div>
     </SocketContext.Provider>
 }
