@@ -5,6 +5,8 @@ export const Home = () => {
 
     return <>
         <RoomList/>
-        <Outlet/>
+        <main>
+           <Outlet/> 
+        </main>
     </>
 }
