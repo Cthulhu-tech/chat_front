@@ -9,7 +9,13 @@
 }
 
 *::-webkit-scrollbar-track {
-    background: #24292f;
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    background-color: #c3cff4;
 }
 
 body {
@@ -45,9 +51,12 @@ aside {
 }
 
 main {
+    display: flex;
     border-radius: 20px;
+    flex-direction: column;
     width: calc(100% - 20px);
     grid-area: 2 / 2 / 8 / 7;
+    justify-content: flex-end;
     background-color: #ffffff;
 }
 
