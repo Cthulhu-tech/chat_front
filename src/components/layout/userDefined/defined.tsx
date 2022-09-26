@@ -15,8 +15,8 @@ export const Defined = () => {
     }
 
     return <div>
-        {location.pathname !== '/' && <NavLink to="/">Back</NavLink>}
-        <input type="button" value="lagout" onClick={Lagout}/>
+        {location.pathname !== '/' && <NavLink to="/" className="back-btn">Back</NavLink>}
+        <input className="defined-lagout" type="button" value="lagout" onClick={Lagout}/>
     </div>
 
 }
