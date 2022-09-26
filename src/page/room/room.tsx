@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom"
 import { MessageList } from "./messageList"
 import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux"
+import './room.scss'
 
 export const Room = () => {
 
@@ -35,7 +36,7 @@ export const Room = () => {
         }
     },[socket, id])
     
-    return <section>
+    return <section className="section-message">
         <MessageList/>
         <MessageInput/>
     </section>

@@ -1,0 +1,27 @@
+.message-list{
+    height: 70vh;
+    overflow-y: auto;
+}
+
+.message{
+    width: 80%;
+    padding: 10px 12px;
+    border: 1px solid gray;
+    border-radius: 0 0 0 20px;
+}
+
+.btn-message{
+    width: 20%;
+    height: 100%;
+    background-color: gray;
+    border-radius: 0 0 20px 0;
+}
+
+.form-container{
+    display: flex;
+}
+
+.section-message{
+    display: flex;
+    flex-direction: column;
+}

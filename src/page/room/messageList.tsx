@@ -14,7 +14,7 @@ export const MessageList = () => {
     
     const List = useMemo(() => reverseData, [messageList])
 
-    return <article>{
+    return <article className="message-list">{
         List.map((message) => {
             return <div key={message.id}>
                 <p>{message.message}</p>

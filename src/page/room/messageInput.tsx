@@ -13,9 +13,9 @@ export const MessageInput = () => {
 
     useEffect(() => {}, [id])
 
-    return <>
-        <input type="text" placeholder="message" onChange={handler} name="msg"/>
-        <input type="button" value="send" onClick={sendMessage}/>
-    </>
+    return <div className="form-container">
+        <input type="text" className="message" placeholder="message" onChange={handler} name="msg"/>
+        <input type="button" value="send" className="btn-message" onClick={sendMessage}/>
+    </div>
 
 }
