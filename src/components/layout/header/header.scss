@@ -1,0 +1,23 @@
+.defined-lagout {
+    width: 80px;
+    height: 35px;
+    transition: 0.3s;
+    color: #c3cff4;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #1f1c24;
+    &:hover {
+        color: #e9ebf0;
+        background-color: #24292f;
+    }
+}
+
+.back-btn{
+    color: black;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-decoration: none;
+    &:hover{
+        color: gray;
+    }
+}

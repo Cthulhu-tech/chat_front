@@ -3,6 +3,7 @@ import { ReduxStore } from "../../../interface/redux"
 import { Defined } from "../userDefined/defined"
 import { useSelector } from "react-redux"
 import { useEffect } from "react"
+import './header.scss'
 
 export const Header = () => {
     
