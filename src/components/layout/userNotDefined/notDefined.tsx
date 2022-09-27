@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom"
 export const NotDefined = () => {
 
     return <div>
-        <NavLink to="/login">Login</NavLink>
-        <NavLink to="/registration">Registration</NavLink>
+        <NavLink className="back-btn" to="/login">Login</NavLink>
+        <NavLink className="back-btn" to="/registration">Registration</NavLink>
     </div>
 
 }

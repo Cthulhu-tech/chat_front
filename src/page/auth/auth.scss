@@ -1,0 +1,24 @@
+.auth-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-area: 3 / 3 / 5 / 5;
+    justify-content: space-between;
+}
+
+.auth-form-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-input {
+    padding: 6px 16px;
+}
+
+.auth-btn {
+    cursor: pointer;
+    padding: 6px 16px;
+    border-radius: 8px;
+    background-color: #8b7ff7;
+}

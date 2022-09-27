@@ -1,10 +1,10 @@
 import { UserPayload, Action } from "../../interface/redux"
 
-const defaultState:UserPayload = {
+const defaultState:UserPayload | any = {
     id: null,
     user: null,
     token: null,
-    load: true,
+    load: null,
 }
 
 const setData = "set_user_data"
